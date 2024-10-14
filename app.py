@@ -152,7 +152,7 @@ def get_video_title(video_id):
 def download_transcript(video_id):
     try:
         transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-        transcript = transcript_list.find_generated_transcript(['ro'])
+        transcript = transcript_list.find_generated_transcript(['en'])
         formatter = TextFormatter()
         transcript_text = formatter.format_transcript(transcript.fetch())
         transcript_text = re.sub(r'\[.*?\]', '', transcript_text)
