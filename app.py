@@ -3,6 +3,9 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import TextFormatter
 import requests
 import re
+import os
+
+
 
 app = Flask(__name__)
 
